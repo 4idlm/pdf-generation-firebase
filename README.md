@@ -40,27 +40,27 @@ Code example
      if (err) return console.log(err);
       console.log(res); // { filename: '/app/businesscard.pdf' }
     });
-
-  API
-var pdf = require('html-pdf');
-pdf.create(html).toFile([filepath, ]function(err, res){
-  console.log(res.filename);
-});
+    
+    API
+       var pdf = require('html-pdf');
+       pdf.create(html).toFile([filepath, ]function(err, res){
+       console.log(res.filename);
+        });
  
-pdf.create(html).toStream(function(err, stream){
-  stream.pipe(fs.createWriteStream('./foo.pdf'));
-});
+      pdf.create(html).toStream(function(err, stream){
+      stream.pipe(fs.createWriteStream('./foo.pdf'));
+      });
  
-pdf.create(html).toBuffer(function(err, buffer){
-  console.log('This is a buffer:', Buffer.isBuffer(buffer));
-});
+     pdf.create(html).toBuffer(function(err, buffer){
+     console.log('This is a buffer:', Buffer.isBuffer(buffer));
+     });
  
  
-// for backwards compatibility
-// alias to pdf.create(html[, options]).toBuffer(callback)
-pdf.create(html [, options], function(err, buffer){});
+     // for backwards compatibility
+     // alias to pdf.create(html[, options]).toBuffer(callback)
+    pdf.create(html [, options], function(err, buffer){});
 
 
  using this we can converted the pdf file
 
-                       Refer pdfgenerator services.   
+                       Refer pdfgeneratorservices.js file.   
